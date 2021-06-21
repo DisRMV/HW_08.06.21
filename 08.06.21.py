@@ -101,13 +101,13 @@ class Reviewer(Mentor):
         return f"Имя: {self.name} \nФамилия: {self.surname}"
 
 
-best_student = Student('Roy', 'Eman', 'male')
+best_student = Student('Darth', 'Vader', 'male')
 best_student.finished_courses += ['Git', 'Some course']
 best_student.courses_in_progress += ['Python']
 best_student.grades['Git'] = [10, 10, 10, 10, 10]
 best_student.grades['Python'] = [10, 10]
 
-cool_student = Student('Ivan', 'Ivanov', 'male')
+cool_student = Student('Frodo', 'Baggins', 'male')
 cool_student.courses_in_progress += ['Git', 'Python', 'Some course']
 cool_student.grades['Git'] = [10, 10]
 cool_student.grades['Python'] = [10, 10]
@@ -118,14 +118,14 @@ print(cool_student.avg_grade())
 print(best_student)
 print(best_student > cool_student)
 
-cool_mentor = Mentor('Some', 'Body')
+cool_mentor = Mentor('John', 'McClane')
 cool_mentor.courses_attached += ['Python']
-best_mentor = Mentor('Max', 'Pain')
+best_mentor = Mentor('Tony', 'Montana')
 
-best_lecturer = Lecturer('Alex', 'Petrov')
+best_lecturer = Lecturer('King', 'Schultz')
 best_lecturer.courses_attached += ['Python', 'Git']
 best_lecturer.grades['Git'] = [10, 10]
-cool_lecturer = Lecturer('Oleg', 'Sidorov')
+cool_lecturer = Lecturer('Ace', 'Ventura')
 cool_lecturer.courses_attached += ['Python', 'Git']
 cool_lecturer.grades['Python'] = [10, 10, 8]
 cool_lecturer.grades['Git'] = [6, 10]
@@ -138,8 +138,8 @@ print(best_lecturer.avg_grade())
 print(best_lecturer)
 print(best_lecturer > cool_lecturer)
 
-some_reviewer = Reviewer('Vasya', 'Pupkin')
-cool_reviewer = Reviewer('Will', 'Hunting')
+some_reviewer = Reviewer('Jules', 'Winnfield')
+cool_reviewer = Reviewer('Vito', 'Corleone')
 some_reviewer.courses_attached += ['Python']
 some_reviewer.rate_hw(best_student, 'Python', 8)
 print(best_student.grades)
